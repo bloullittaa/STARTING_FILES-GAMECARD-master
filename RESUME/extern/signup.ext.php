@@ -20,18 +20,20 @@ if(isset($_POST["signup-submit"])){
     }else if($password!==$password2){
         header("Location: ../ACCOUNT/signup.php?error=PWDdontmatch");
         exit();
-    }else {
+    }else {#myriemSaura sql requette pour interagir avec php 
         $sql = "SELECT username FROM gamecard WHERE username='".$username."';";
-        $res = mysqli_query($conn,$sql);
+        $res = mysqli_query($conn,$sql);  
+        
         if(!$res){
             header("Location: ../ACCOUNT/signup.php?error=sqlerror");
             exit();
         }else{
+            #requette sql pour si un username existe deja dans ma base de donnée
             $resultCheck = mysqli_num_rows($res);
             if($resultCheck>0){
                 header("Location: ../ACCOUNT/signup.php?error=USERNAMETAKEN");
                 exit();
-            }else{
+            }else{ # requette sql pour inserer les données si le pseudo est dispo
                 $hashedPwd = password_hash($password,PASSWORD_DEFAULT);
                 $sql = "INSERT INTO gamecard(name,username,email,pwd) VALUES('".$name."','".$username."','".$email."','".$hashedPwd."');";
                 $res = mysqli_query($conn,$sql);
