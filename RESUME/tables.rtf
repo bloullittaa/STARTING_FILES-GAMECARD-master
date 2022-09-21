@@ -1,0 +1,170 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf200
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 Helvetica-BoldOblique;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww12440\viewh14420\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\i\b \cf0 \'97CULTURE\'97
+\f0\i0\b0 \
+\
+CREATE TABLE culture (\
+  id int(11) NOT NULL,\
+  question text DEFAULT NULL,\
+  reponse text DEFAULT NULL,\
+  level int(11) DEFAULT NULL,\
+  type varchar(100) DEFAULT NULL\
+) ;\
+\
+INSERT INTO culture (id, question, reponse, level, type) VALUES\
+(1, 'Qui a ecrit les fameuses fables', 'Jen de la Fontaine', 1, 'texte'),\
+(2, 'Quelle est la capitale de pays?', 'Stockholm', 1, 'texte'),\
+(3, 'Quel est le nom de cette c\'e9lebre rue?', 'Abbey Road', 1, 'texte'),\
+(4, 'Quel acteur a jou\'e9 dans ces films?', 'Robert de Niro', 1, 'qcm'),\
+(5, 'Comment appelle t'on ce sapin de Briancon?', 'mel\'e8ze', 2, 'qcm'),\
+(6, 'Qui a cr\'e9e le journal Lib\'e9ration ?', 'Jean-Paul Sartre', 2, 'qcm'),\
+(7, 'Quelle est la capitale de ce pays?', 'T\'e9h\'e9ran', 2, 'texte'),\
+(8, 'Qui est \'e0 l'origine de la com\'e9die humaine?', 'Balzac', 2, 'qcm'),\
+(9, 'Qui a \'e9crit ce c\'e9lebre livre?', 'George Orwell', 2, 'texte'),\
+(10, 'Quel concert a \'e9t\'e9 organis\'e9 afin de venir en aide \'e0 l\'92Afrique?', 'Live Aid', 3, 'qcm'),\
+(11, 'Quel artiste voit son morceau devenir le premier clip noir \'e0 passer sur MTV ?', 'Michael Jackson', 3, 'qcm'),\
+(12, 'Qui fut la femme de Serge Gainsbourg?', 'Jane Birkin', 3, 'qcm'),\
+(13, 'Quelle ville a vu ces deux artistes enrigistrer des albums mythiques?', 'Berlin', 3, 'qcm'),\
+(14, 'Qui est cet artiste?', 'Eddie Mitchell', 3, 'qcm');\
+\
+
+\f1\i\b \'97HISTOIRE\'97
+\f0\i0\b0 \
+\
+CREATE TABLE histoire (\
+  id int(11) NOT NULL,\
+  question text DEFAULT NULL,\
+  reponse text DEFAULT NULL,\
+  level int(11) DEFAULT NULL,\
+  type varchar(100) DEFAULT NULL\
+) \
+\
+\
+INSERT INTO `histoire` (`id`, `question`, `reponse`, `level`, `type`) VALUES\
+(1, 'Durant quelle guerre du napalm etait jet\'e9 sur la population locale ?', 'guerre du Vietnam', 1, 'qcm'),\
+(2, 'De quel logo s\\'agit il?', 'ONU', 1, 'texte'),\
+(3, 'Quel scandale correspond \'e0 ces 2 images?', 'scandale du Watergate', 1, 'texte'),\
+(4, 'Quel \'e9venement est represent\'e9 par cette image?', 'assassinat de JFK', 1, 'qcm'),\
+(5, 'Qui est ce c\'e9lebre roi francais?', 'Louis XIV', 1, 'qcm'),\
+(6, 'Quel \'e9tait le surnom du roi que vous venez de voir ?', 'Roi Soleil', 2, 'texte'),\
+(7, 'Comment appelait on cette femme politique?', 'la Dame de Fer', 2, 'qcm'),\
+(8, 'Que s\\'est il pass\'e9 en 1905?', 'separation de l\\'Eglise et de l\\'Etat', 2, 'qcm'),\
+(9, 'Quel pays est symbolis\'e9 par ces figures politiques?', 'Cuba', 2, 'texte'),\
+(10, 'En quelle ann\'e9e l\\'Alg\'e9rie est-elle devenue ind\'e9pendante?', '1962', 3, 'texte'),\
+(11, 'En quelle ann\'e9e les premieres ecritures sont apparues en M\'e9sopotamie?', '-3500', 3, 'qcm'),\
+(12, 'En quelle ann\'e9e s\\'est effondr\'e9 l\\'empire romain?', '476', 3, 'qcm'),\
+(13, 'Comment s\\'appelle cette revolution russe de 1917?', 'revolution rouge', 3, 'texte'),\
+(14, 'Quel est le nom de ce pr\'e9sident am\'e9ricain?', 'Jimmy Carter', 3, 'texte');\
+\
+
+\f1\i\b \'97SCIENCES\'97
+\f0\i0\b0 \
+\
+CREATE TABLE `sciences` (\
+  `id` int(11) NOT NULL,\
+  `question` text DEFAULT NULL,\
+  `reponse` text DEFAULT NULL,\
+  `level` int(11) DEFAULT NULL,\
+  `type` varchar(100) DEFAULT NULL\
+) \
+\
+\
+INSERT INTO `sciences` (`id`, `question`, `reponse`, `level`, `type`) VALUES\
+(1, 'ABC est un triangle rectangle en A, AB=4, AC=3, combien mesure l\\'hypot\'e9nuse BC?', '5', 1, 'texte'),\
+(2, 'Dans quel domaine s\\'est illustr\'e9 cet homme?', 'relativite generale', 1, 'qcm'),\
+(3, 'Quelle est la probabilit\'e9 d\\'obtenir un 6 (d\'e9 non truqu\'e9)?', '1/6', 1, 'qcm'),\
+(4, 'Quelle femme a d\'e9couvert la radioactivit\'e9 ?', 'Marie Curie', 1, 'qcm'),\
+(5, 'Sur quel support travaille le chimiste?', 'paillaisse', 2, 'qcm'),\
+(6, 'A quelle temp\'e9rature l\\'eau se transforme en gaz ?', '100', 2, 'qcm'),\
+(7, 'Quelles cellules sont responsables de l\\'immunit\'e9?', 'globules blancs', 2, 'texte'),\
+(8, 'Comment s\\'appelle la medecine du sang?', 'h\'e9matologie', 2, 'texte'),\
+(9, 'Quelle vaisseau est reli\'e9 au cerveau?', 'artere carotidienne', 3, 'qcm'),\
+(10, 'Quelle est la primitive de 1/x?', 'ln x', 3, 'texte'),\
+(11, 'Comment s\\'appelle ce c\'e9lebre scientifique?', 'Stephen Hawking', 3, 'texte'),\
+(12, 'Comment est mort ce personnage tristement c\'e9lebre?', 'En mangeant une pomme', 3, 'texte'),\
+(13, 'Quel est le surnom de ce celebre math\'e9maticien?', 'le prince des mathematiciens', 3, 'qcm'),\
+(14, 'Quelle est la nature de cette mol\'e9cule?', 'enantiomere', 3, 'qcm');\
+\
+
+\f1\i\b \'97SPORT\'97
+\f0\i0\b0 \
+\
+CREATE TABLE `sport` (\
+  `id` int(11) NOT NULL,\
+  `question` text DEFAULT NULL,\
+  `reponse` text DEFAULT NULL,\
+  `level` int(11) DEFAULT NULL,\
+  `type` varchar(100) DEFAULT NULL\
+) \
+\
+\
+INSERT INTO `sport` (`id`, `question`, `reponse`, `level`, `type`) VALUES\
+(1, 'Qu\\'est ce qu\\'un jab en boxe?', 'un direct du bras avant', 1, 'qcm'),\
+(2, 'Quelle est cette p\'e9nalite?', 'lanc\'e9 franc', 1, 'qcm'),\
+(3, 'Combien de joueurs forment une \'e9quipe de basket?', '5', 1, 'texte'),\
+(4, 'Quel sport correspond \'e0 ces termes?', 'bowling', 1, 'qcm'),\
+(5, 'Comment etaient faites les queues de billard?', 'bois', 2, 'qcm'),\
+(6, 'Dan quel sport retoruve t\\'on ces termes?', 'football americain', 2, 'texte'),\
+(7, 'Combien de periodes y\\'a t-il dans un match de hockey?', '3', 2, 'qcm'),\
+(8, 'Combien de haies un athlete doit-il eviter lors d\\'un 400m haies?', '10', 2, 'qcm'),\
+(9, 'Quelle equipe possede le plus grand stade?', 'barcelone', 2, 'texte'),\
+(10, 'Quelle est la taille d\\'une cage de football?', '7,3', 2, 'qcm'),\
+(11, 'Quel est le premier club francais cr\'e9e en France?', 'le Havre', 3, 'qcm'),\
+(12, 'Quelle est la vitesse moyenne d\\'un l\'e9vrier?', '60', 3, 'qcm'),\
+(13, 'Lequel de ces tennisman a remport\'e9 le plus de fois Roland-Garros?', 'Bjorn Borg', 3, 'qcm'),\
+(14, 'Dans quel sport utilse t-on un sand-wedge?', 'golf', 3, 'qcm');\
+\
+\
+\
+\
+\
+\
+\
+\
+INSERT INTO `propositions` (`questionId`, `proposition1`, `proposition2`, `proposition3`, `theme`) VALUES\
+(1, 'un direct du bras avant', 'coup bas', 'saut sur l\\'arbitre', 'sport'),\
+(2, 'lance franc', 'faute', 'arbitre', 'sport'),\
+(4, 'freesbee', 'golf', 'bowling', 'sport'),\
+(5, 'metal', 'acier', 'bois', 'sport'),\
+(7, '7', '3', '14', 'sport'),\
+(8, '20', '3', '10', 'sport'),\
+(10, '10', '23', '7,3', 'sport'),\
+(11, 'le Havre', 'Nantes', 'PSG', 'sport'),\
+(12, '30', '80', '60', 'sport'),\
+(13, 'Bjorn Borg', 'Ivan Lendl', 'Djokovic', 'sport'),\
+(14, 'voile', 'golf', 'polo', 'sport'),\
+(2, 'espace', 'relativite generale', 'algebre', 'sciences'),\
+(3, '1/6', '2/3', '10', 'sciences'),\
+(4, 'Marie Curie', 'Simone de Beauvoir', 'Jk Rowling', 'sciences'),\
+(5, 'paillasson', 'tableau', 'paillaisse', 'sciences'),\
+(6, '1000', '100', '18', 'sciences'),\
+(7, 'hematologie', 'cardiologie', 'immunologie', 'sciences'),\
+(9, 'artere carotidienne', 'globules blancs', 'cellules immunitaires', 'sciences'),\
+(13, 'genie des chiffres', 'dieu allemand', 'prince des mathematiciens', 'sciences'),\
+(14, 'alcool', 'enantiomere', 'acide hydroxyle', 'sciences'),\
+(1, 'guerre de Coree', 'guerre du Vietnam', 'guerre du Golfe', 'histoire'),\
+(4, 'investiture de JFK', 'arriv\'e9e du president Bush', 'assassinat de JFK', 'histoire'),\
+(5, 'Louis XVI', 'Henri V', 'Louis XIV', 'histoire'),\
+(7, 'Thatchum', 'La Dame de Fer', 'la guerri\'e8re', 'histoire'),\
+(8, 'Separation du clerg\'e9', 'Separation de l\\'Eglise et de l\\'Etat', 'bataille de Nevers', 'histoire'),\
+(11, '-230', '-600', '-3500', 'histoire'),\
+(12, '543', '1200', '476', 'histoire'),\
+(4, 'Owen Wilson', 'Robert De Niro', 'Johnny Hallyday', 'culture'),\
+(5, 'mel\'e8ze', 'c\'e8dre', 'pommier', 'culture'),\
+(6, 'G.D\\'Estaing', 'Jean-Paul Sartre', 'Henry Miller', 'culture'),\
+(8, 'Volraire', 'Racine', 'Balzac', 'culture'),\
+(10, 'Live Aid', 'Les Enfoir\'e9s', 'Sunday Service', 'culture'),\
+(11, 'Prince', 'Michael Jackson', 'Ali', 'culture'),\
+(12, 'Madonna', 'Jane Birkin', 'Vanessa Paradis', 'culture'),\
+(13, 'Stockholm', 'Paris', 'Berlin', 'culture'),\
+(14, 'Johnny Hallyday', 'Eddie Mitchell', 'Charles Aznavour', 'culture');\
+\
+}
